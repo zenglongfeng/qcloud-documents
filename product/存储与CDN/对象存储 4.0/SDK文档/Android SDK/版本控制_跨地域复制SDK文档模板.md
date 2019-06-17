@@ -158,8 +158,9 @@ putBucketReplicationRequest.setReplicationConfigurationWithRole(ownerUin, subUin
 PutBucketReplicationRequest.RuleStruct ruleStruct = new PutBucketReplicationRequest.RuleStruct();
 ruleStruct.id = "replication_01"; //用来标注具体 Rule 的名称
 ruleStruct.isEnable = true; //标识 Rule 是否生效 :true, 生效； false, 不生效
+ruleStruct.appid = "1250000000"; //appid
 ruleStruct.region = Region.AP_Beijing.getRegion(); //目标存储桶地域信息
-ruleStruct.bucket = "bucketname-appid";  // 目标存储桶
+ruleStruct.bucket = "destExamplebucket-1250000000";  // 目标存储桶
 ruleStruct.prefix = "34"; //前缀匹配策略，
 putBucketReplicationRequest.setReplicationConfigurationWithRule(ruleStruct);
 
